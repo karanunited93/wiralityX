@@ -282,6 +282,8 @@ footer small{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-tr
 .also .row span{font-family:var(--disp);font-weight:600;font-size:clamp(16px,2vw,22px);color:var(--dim);
   border:1px solid var(--line);padding:8px 14px}
 
+.hero__partners{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:32px}
+.pbadge{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line-2);padding:8px 13px;color:var(--paper)}
 .editbar{position:fixed;bottom:18px;right:18px;z-index:120;display:flex;gap:8px}
 .editbar button{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
   background:#111;border:1px solid var(--line-2);color:#fff;padding:10px 14px;cursor:pointer}
@@ -321,6 +323,11 @@ body.editing .edit-hint{display:block}
         <a class="btn" href="mailto:hello@wirality.in?subject=Intro%20call%20%E2%80%94%20WiralityX">Book an intro call</a>
         <a class="btn btn--ghost" href="#marketing">See the work</a>
       </div>
+      <div class="hero__partners">
+        <span class="tag">// Official partners</span>
+        <span class="pbadge">Meta Business Partner</span>
+        <span class="pbadge">Google Partner</span>
+      </div>
       <div class="hero__meta">
         <div class="cell"><div class="k">$7.7M</div><div class="l">Revenue scaled</div></div>
         <div class="cell"><div class="k">500M+</div><div class="l">Impressions</div></div>
@@ -351,10 +358,15 @@ body.editing .edit-hint{display:block}
   <section class="wrap" id="mkt-services">
     <div class="sec-head rv">
       <h2>What we run</h2>
-      <p class="lead">Seven services, one growth engine — strategy to media buying to analytics, on every major platform.</p>
+      <p class="lead">Eight services, one growth engine — from strategy and media buying to CTV brand campaigns and analytics, across every major platform.</p>
     </div>
     <div class="svc" id="mkt-serv"></div>
     <div class="platforms" id="mkt-plat"></div>
+    <div class="also rv">
+      <span class="tag">// Official partners</span>
+      <div class="row" id="mkt-partners"></div>
+    </div>
+    <p class="loopnote">Beyond performance, we also run <span>brand campaigns across CTV and premium platforms</span> — with direct partnerships across Meta, Google, InShorts, MCanvas and InMobi.</p>
   </section>
 
   <section class="wrap" id="mkt-stories">
@@ -500,9 +512,10 @@ const SITE = {
     {opt:'B', k:'We fuel your in-house team', d:'You keep the media desk. We supply the creative testing engine — hypotheses, assets and iterations — that feeds it.'},
   ],
   nextsteps: [
-    {n:'1', h:'Intro call', p:'Align on goals, funnel & current creative.'},
-    {n:'2', h:'Creative audit', p:'We review your account & spot the gaps.'},
-    {n:'3', h:'30-day pilot', p:'One month of the engine — measured live.'},
+    {n:'1', h:'Audit your ad accounts', p:'We go through your accounts end to end.'},
+    {n:'2', h:'Present our findings', p:'What is working, what is leaking, where the upside is.'},
+    {n:'3', h:'Plan with targets', p:'A clear media plan with numbers to hit.'},
+    {n:'4', h:'Run the media', p:'We take over and scale against the targets.'},
   ],
   verticals: [
     {name:'D2C / E-commerce', ids:['unbound','nandus','gyan','akshayakalpa','supertails','magniflex','abinbev','mschief']},
@@ -716,14 +729,15 @@ const MKT = {
     {v:'70%↓', c:'Practo', l:'cost per acquisition'},
   ],
   services:[
-    'Strategy','Creative','Social Media','Paid Social & Media Buying',
+    'Strategy','Creative','Social Media','Media Buying — Social · Search · CTV',
     'Video Production','Web & Analytics','E-comm & Performance','Reporting & Insights'
   ],
-  platforms:['Google Display','Dynamic App Remarketing','Meta App Installs','YouTube In-Stream','YouTube Discovery','TikTok','Gmail Sponsored','Google App Installs','RLSA Search','Google Shopping','Carousel','Stories','Video Ads'],
+  platforms:['Google Display','Dynamic App Remarketing','Meta App Installs','YouTube In-Stream','YouTube Discovery','Gmail Sponsored','Google App Installs','RLSA Search','Google Shopping','CTV','InShorts','MCanvas','InMobi','Carousel','Stories','Video Ads'],
+  partners:['Meta','Google','InShorts','MCanvas','InMobi'],
   also:["Nandu's",'Simpl','Superkicks','Chanakya University','Shvasa'],
   cases:[
     {name:'Osmo', sector:'Ed-Tech', ovr:"Byju's-owned learning brand. Scaled user acquisition across the US, Canada, UK and Australia with a full-platform media mix.",
-     plat:'Google Display · Dynamic App Remarketing · Meta · YouTube · TikTok · RLSA',
+     plat:'Google Display · Dynamic App Remarketing · Meta · YouTube · RLSA',
      res:[{v:'$7.77M',l:'revenue scaled'},{v:'529M',l:'impressions'},{v:'2.8%',l:'Meta conversion rate'}]},
     {name:'Gyan', sector:'FMCG / Dairy', ovr:"Lucknow dairy brand expanding its app and subscription base across 70+ stores on the back of a fast-growing delivery model.",
      plat:'Meta · Google · App Installs · Remarketing',
@@ -763,6 +777,8 @@ const MKT = {
   });
   // platforms
   const p=$('#mkt-plat');MKT.platforms.forEach(x=>p.appendChild(el('span',null,x)));
+  // partners
+  const pr=$('#mkt-partners');MKT.partners.forEach(x=>pr.appendChild(el('span',null,x)));
   // also
   const a=$('#mkt-also');MKT.also.forEach(x=>a.appendChild(el('span',null,x)));
   // marketing case studies (data-forward, reuse client styles)
