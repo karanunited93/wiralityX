@@ -302,7 +302,8 @@ body.editing .edit-hint{display:block}
   <button class="nav__burger" id="burger">Menu</button>
   <nav class="nav__links" id="links">
     <a href="#marketing">Marketing</a>
-    <a href="#creatives">Creatives</a>
+    <a href="#work">Growth Stories</a>
+    <a href="https://karanunited93.github.io/gocolorsxwiralitycreators/" target="_blank" rel="noopener">Creators</a>
     <a href="#engagement">Engagement</a>
     <a class="nav__cta" href="book.html">Book a call</a>
   </nav>
@@ -321,7 +322,7 @@ body.editing .edit-hint{display:block}
       <p class="hero__sub">WiralityX is Wirality's full performance stack — a <b>media-buying engine</b> and a <b>creative engine</b>, working as one. Data decides, creative delivers, media scales.</p>
       <div class="hero__actions">
         <a class="btn" href="book.html">Book an intro call</a>
-        <a class="btn btn--ghost" href="#marketing">See the work</a>
+        <a class="btn btn--ghost" href="#work">See the work</a>
       </div>
       <div class="hero__partners">
         <span class="tag">// Official partners</span>
@@ -348,7 +349,7 @@ body.editing .edit-hint{display:block}
   <!-- ACT I: PERFORMANCE MARKETING -->
   <section class="wrap act" id="marketing">
     <div class="act-head rv">
-      <span class="tag">// Act I — Performance Marketing</span>
+      <span class="tag">// Performance Marketing</span>
       <h2>Media<br><span class="thin">that scales.</span></h2>
       <p class="lead">Independent, data-first media buying across the full funnel. We run the accounts — strategy, paid social, search, shopping and analytics — and scale what works. Art gets attention; math compounds it.</p>
     </div>
@@ -369,65 +370,28 @@ body.editing .edit-hint{display:block}
     <p class="loopnote">Beyond performance, we also run <span>brand campaigns across CTV and premium platforms</span> — with direct partnerships across Meta, Google, InShorts, MCanvas and InMobi.</p>
   </section>
 
-  <section class="wrap" id="mkt-stories">
-    <div class="sec-head rv">
-      <h2>Growth stories</h2>
-      <p class="lead">Media engagements where the numbers did the talking.</p>
-    </div>
-    <div id="mcases"></div>
-    <div class="also rv">
-      <span class="tag">// Also optimised &amp; scaled</span>
-      <div class="row" id="mkt-also"></div>
-    </div>
-  </section>
+  
 
   <!-- ACT II: PERFORMANCE CREATIVES -->
-  <section class="wrap act" id="creatives">
-    <div class="act-head rv">
-      <span class="tag">// Act II — Performance Creatives</span>
-      <h2>Creative<br><span class="thin">that performs.</span></h2>
-      <p class="lead">The in-house creative engine: 50+ net-new assets a month, tested and refreshed against your funnel before fatigue sets in. Below, the work is the only colour on the page.</p>
-    </div>
-  </section>
-
-  <!-- WHAT WE DO -->
-  <section class="wrap" id="approach">
-    <div class="sec-head rv">
-      <h2>Creative is<br>the targeting now</h2>
-      <p class="lead" data-edit="approach.lead">Platforms reward volume and variation. The biggest constraint on your Meta strategy is the constraint you put on your creative process — so we industrialised ours.</p>
-    </div>
-    <div class="stats" id="stats"></div>
-  </section>
-
-  <!-- METHOD -->
-  <section class="wrap" id="method">
-    <div class="sec-head rv">
-      <h2>The performance<br>creative engine</h2>
-      <p class="lead">A repeatable loop that turns insight into performance — delivered every month, refreshed before fatigue sets in.</p>
-    </div>
-    <div class="method" id="method-steps"></div>
-    <div class="cadence" id="cadence"></div>
-    <p class="loopnote" data-edit="method.loop">From hypothesis to scale: we convert insights into test angles, build multiple variations per angle, launch across platforms, let data eliminate weak concepts, then <span>double down on what works</span>. Every campaign feeds the next — the loop never stops.</p>
-  </section>
-
-  <!-- RESULTS -->
-  <section class="wrap" id="results">
-    <div class="sec-head rv">
-      <h2>Results across<br>the board</h2>
-      <p class="lead">A sample of outcomes from live engagements. Every number below came from creative that was built, tested and refreshed.</p>
-    </div>
-    <div class="results" id="results-grid"></div>
-  </section>
+  
 
   <!-- WORK -->
   <section class="wrap" id="work">
     <div class="sec-head rv">
-      <h2>The work</h2>
-      <p class="lead">Performance creative across four verticals. Twenty-one brands, one engine. Jump to any of them.</p>
+      <h2>Growth stories</h2>
+      <p class="lead">Every engagement told through the work — the story, the numbers, and the creative that drove them.</p>
     </div>
     <div class="roster" id="roster"></div>
     <div id="clients"></div>
   </section>
+
+  
+
+  
+
+  
+
+
 
   <!-- ENGAGEMENT -->
   <section class="wrap" id="engagement">
@@ -518,15 +482,15 @@ const SITE = {
     {n:'4', h:'Run the media', p:'We take over and scale against the targets.'},
   ],
   verticals: [
-    {name:'D2C / E-commerce', ids:['unbound','nandus','gyan','akshayakalpa','supertails','magniflex','abinbev','mschief']},
+    {name:'D2C / E-commerce', ids:['unbound','nandus','gyan','akshayakalpa','supertails','magniflex','abinbev','mschief','thirdwave','smartmedicalbuyer']},
     {name:'Tech / Fintech', ids:['cred','simpl','oneplus','osmo','porter','shvasa','atovio']},
     {name:'Retail', ids:['superkicks','gocolors']},
-    {name:'Services / Regulated', ids:['dreamfolks','tara','chanakya','asbl']},
+    {name:'Services / Regulated', ids:['dreamfolks','tara','chanakya','asbl','practo','indigolearn']},
   ],
 };
 
 /* Order of client blocks down the page (strongest visuals first). */
-const ORDER = ['cred','superkicks','dreamfolks','osmo','simpl','porter','oneplus','unbound','magniflex','gocolors','tara','nandus','akshayakalpa','chanakya','abinbev','gyan','shvasa','supertails','mschief','atovio','asbl'];
+const ORDER = ['cred','superkicks','dreamfolks','osmo','simpl','porter','oneplus','unbound','magniflex','gocolors','tara','nandus','akshayakalpa','chanakya','abinbev','gyan','shvasa','supertails','mschief','atovio','asbl','practo','indigolearn','thirdwave','smartmedicalbuyer'];
 
 const CLIENTS = {
   cred:{name:'CRED',vert:'Tech / Fintech',cat:'Fintech',priority:'Hero',dur:'2023–Present',platforms:'Instagram · YouTube · Meta',
@@ -624,6 +588,33 @@ Object.assign(CLIENTS.supertails,{vaspect:'9/16', videos:['5eKO06r4KGU','6Gr19gt
 Object.assign(CLIENTS.atovio    ,{vaspect:'9/16', videos:['14djQn34gMc','1bq0Y9uKgM0','a7fBxjWb3HA']});
 Object.assign(CLIENTS.mschief   ,{vaspect:'9/16', videos:['HcH9dxWvfSg','ZU61ZzWfSlM','Gt7hJp3Ylgw']});
 
+/* Merge media metrics into brands that also ran as growth stories */
+Object.assign(CLIENTS.cred        ,{res:[{v:'67%↓',l:'cost / confirmed user'},{v:'3×',l:'users acquired'},{v:'100+',l:'creative designs'}]});
+Object.assign(CLIENTS.osmo        ,{res:[{v:'$7.77M',l:'revenue scaled'},{v:'529M',l:'impressions'},{v:'1.9×',l:'overall revenue'}]});
+Object.assign(CLIENTS.oneplus     ,{res:[{v:'3×',l:'return on ad spend'},{v:'₹13.7Cr',l:'impressions'},{v:'2.7%',l:'CTR'}]});
+Object.assign(CLIENTS.akshayakalpa,{res:[{v:'80K+',l:'new users'},{v:'12K',l:'daily active users'},{v:'6M+',l:'YouTube views'}]});
+Object.assign(CLIENTS.gyan        ,{res:[{v:'8,300',l:'orders / day'},{v:'₹1Cr+',l:'revenue contribution'},{v:'90%',l:'subscription growth'}]});
+
+/* Media-led growth stories that had no static reel */
+Object.assign(CLIENTS,{
+  practo:{name:'Practo',vert:'Services / Regulated',cat:'Healthcare',priority:'Growth',dur:'Media',platforms:'Meta · Google · Carousel · Video',
+    obj:"Reduce patient-acquisition cost across a wide price range with tightly-tested creative and sharp audience segmentation.",
+    app:["Audience segmentation across a wide price range.","Tightly-tested creative to drive CPA down."],
+    res:[{v:'70%↓',l:'cost / acquisition'},{v:'₹1,500→₹450',l:'CPA in 3 months'}]},
+  indigolearn:{name:'IndigoLearn',vert:'Services / Regulated',cat:'Education',priority:'Growth',dur:'7 months',platforms:'YouTube · Google · Performance',
+    obj:"Grow paid revenue for a finance & accounting learning platform against far bigger competitors.",
+    app:["YouTube- and Google-led performance.","Remarketing to convert an already-built audience."],
+    res:[{v:'₹50L',l:'GMV in 7 months'},{v:'₹12.5L',l:'peak month value'}]},
+  thirdwave:{name:'Third Wave Coffee',vert:'D2C / E-commerce',cat:'Coffee / F&B',priority:'Growth',dur:'2 months',platforms:'Carousel · Video · Stories · Dynamic',
+    obj:"Build a Bangalore coffee brand's digital presence from scratch — engagement first, revenue via retargeting.",
+    app:["Visual, written and video content built from scratch.","Retargeting to turn the audience into revenue."],
+    res:[{v:'16K+',l:'new users / 2 months'},{v:'30%↓',l:'cost / conversion'}]},
+  smartmedicalbuyer:{name:'Smart Medical Buyer',vert:'D2C / E-commerce',cat:'Healthcare E-Comm',priority:'Growth',dur:'Media',platforms:'Google Search · Shopping · Meta',
+    obj:"Scale a medical-equipment marketplace across products and categories with search, shopping and social as one.",
+    app:["Search, shopping and social working together.","Scaled across products and categories."],
+    res:[{v:'10×',l:'ROAS across ad groups'},{v:'47%↓',l:'cost / acquisition'}]},
+});
+
 /* ===================== RENDER ===================== */
 const A = window.WIRALITY_ASSETS || {creatives:{},logo:'',mark:''};
 const $ = (s,r=document)=>r.querySelector(s);
@@ -645,12 +636,12 @@ $('#navlogo').src = A.logo; $('#footlogo').src = A.logo; { const h=$('#herologo'
 })();
 
 // stats
-(()=>{const g=$('#stats');SITE.stats.forEach(s=>{
+(()=>{const g=$('#stats');if(!g)return;SITE.stats.forEach(s=>{
   g.appendChild(el('div','cell',`<div class="big">${s.n}</div><div class="t">${s.t}</div><div class="d">${s.d}</div>`));
 });})();
 
 // method
-(()=>{const g=$('#method-steps');SITE.method.forEach(s=>{
+(()=>{const g=$('#method-steps');if(!g)return;SITE.method.forEach(s=>{
   g.appendChild(el('div','step',`<div class="n">${s.n}</div><div class="h">${s.h}</div><div class="p">${s.p}</div>`));
 });
 const c=$('#cadence');SITE.cadence.forEach(x=>{
@@ -658,7 +649,7 @@ const c=$('#cadence');SITE.cadence.forEach(x=>{
 });})();
 
 // results
-(()=>{const g=$('#results-grid');SITE.results.forEach(r=>{
+(()=>{const g=$('#results-grid');if(!g)return;SITE.results.forEach(r=>{
   g.appendChild(el('div','r',`<div class="v">${r.v}</div><div class="c">${r.c}</div><div class="l">${r.l}</div>`));
 });})();
 
@@ -690,8 +681,7 @@ const c=$('#cadence');SITE.cadence.forEach(x=>{
     } else if(A.creatives[id]){
       media=`<div class="creative__img"><img src="${A.creatives[id]}" alt="${c.name} performance creatives" loading="lazy"></div>`;
     } else {
-      media=`<div class="creative__img"><p>Lead-gen engagement — no static reel</p></div>`;
-      emptyCls=' creative--empty';
+      media='';
     }
     sec.innerHTML=`
       <div class="client__head">
@@ -708,10 +698,9 @@ const c=$('#cadence');SITE.cadence.forEach(x=>{
           <div class="client__res">${res}</div>
         </div>
       </div>
-      <div class="creative${emptyCls}">
+      ${media?`<div class="creative${emptyCls}">
         <div class="creative__cap"><span>${capL}</span><span>${capR}</span></div>
-        ${media}
-      </div>`;
+        ${media}</div>`:''}`;
     g.appendChild(sec);
   });
 })();
@@ -780,10 +769,10 @@ const MKT = {
   // partners
   const pr=$('#mkt-partners');MKT.partners.forEach(x=>pr.appendChild(el('span',null,x)));
   // also
-  const a=$('#mkt-also');MKT.also.forEach(x=>a.appendChild(el('span',null,x)));
+  const a=$('#mkt-also');if(a)MKT.also.forEach(x=>a.appendChild(el('span',null,x)));
   // marketing case studies (data-forward, reuse client styles)
   const w=$('#mcases');
-  MKT.cases.forEach((c,i)=>{
+  if(w)MKT.cases.forEach((c,i)=>{
     const nn='M'+String(i+1).padStart(2,'0');
     const res=c.res.map(r=>`<div class="r"><div class="v">${r.v}</div><div class="l">${r.l}</div></div>`).join('');
     const sec=el('section','mcase');sec.id='m-'+c.name.toLowerCase().replace(/[^a-z0-9]+/g,'-');
