@@ -4,6 +4,18 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>WiralityX — Brand × Media × Performance</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WiralityX">
+<meta property="og:title" content="WiralityX — Brand × Media × Performance">
+<meta property="og:description" content="Brand marketing, media innovation and performance, under one roof. Campaigns made in-house and scaled across every major platform.">
+<meta property="og:url" content="https://karanunited93.github.io/wiralityX/">
+<meta property="og:image" content="https://karanunited93.github.io/wiralityX/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WiralityX — Brand × Media × Performance">
+<meta name="twitter:description" content="Brand marketing, media innovation and performance, under one roof.">
+<meta name="twitter:image" content="https://karanunited93.github.io/wiralityX/og.jpg">
 <meta name="description" content="Brand marketing, media innovation and performance, under one roof. Campaigns made in-house and scaled across every major platform." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -427,6 +439,40 @@ footer small{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-tr
   .eng-teams__grid{grid-template-columns:1fr;gap:12px}
   .eng-teams .link span{transform:rotate(90deg);width:40px;height:40px}
 }
+
+/* ---------- PROOF ---------- */
+#proof{padding-top:72px}
+.proof{display:grid;grid-template-columns:180px 1fr;gap:24px 40px;align-items:start;padding:36px 0;border-top:1px solid var(--line)}
+.proof__wall{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:14px 30px}
+.proof__wall li{font-family:var(--disp);font-size:clamp(18px,2vw,24px);font-weight:500;letter-spacing:-.01em;color:var(--dim);transition:color .2s}
+.proof__wall li:hover{color:var(--paper)}
+.proof__press{list-style:none;margin:0;padding:0 1px 1px 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.proof__press li{border:1px solid var(--line);margin:0 -1px -1px 0}
+.proof__press a{display:flex;flex-direction:column;gap:8px;height:100%;background:var(--ink);padding:22px 22px 24px;position:relative;transition:background .2s}
+.proof__press a:hover{background:#0b0b0b}
+.proof__press .pub{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.proof__press .hl{font-family:var(--disp);font-size:17px;font-weight:500;line-height:1.3;padding-right:20px}
+.proof__press .go{position:absolute;top:20px;right:20px;color:var(--faint)}
+.proof__press a:hover .go{color:var(--paper)}
+/* ---------- GROWTH STORIES FILTER ---------- */
+.gs-controls{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:40px}
+.gs-filter{display:flex;gap:6px;flex-wrap:wrap}
+.gs-filter button{font-family:var(--disp);font-size:16px;font-weight:500;color:var(--faint);background:none;border:0;cursor:pointer;padding:10px 18px;border-radius:999px;transition:color .2s,background .2s}
+.gs-filter button sup{font-family:var(--mono);font-size:10px;margin-left:5px;opacity:.7}
+.gs-filter button:hover{color:var(--paper)}
+.gs-filter button[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+.gs-filter button:focus-visible,.gs-more button:focus-visible{outline:1px solid var(--paper);outline-offset:3px}
+#clients .client[hidden]{display:none}
+.gs-more{display:flex;justify-content:center;padding:64px 0 8px}
+.gs-more[hidden]{display:none}
+@media(max-width:700px){
+  .proof{grid-template-columns:1fr;gap:18px;padding:28px 0}
+  .proof__wall{gap:10px 20px}
+  .gs-filter{flex-wrap:nowrap;overflow-x:auto;margin-inline:calc(-1 * var(--pad));padding-inline:var(--pad);scrollbar-width:none}
+  .gs-filter::-webkit-scrollbar{display:none}
+  .gs-filter button{flex:0 0 auto}
+  .gs-more{padding-top:48px}
+}
 </style>
 </head>
 <body>
@@ -480,6 +526,18 @@ footer small{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-tr
     </div>
   </section>
 
+  <!-- PROOF -->
+  <section class="wrap" id="proof">
+    <div class="proof rv">
+      <span class="tag">// Trusted by</span>
+      <ul class="proof__wall"><li>CRED</li><li>OnePlus</li><li>Truecaller</li><li>Go Colors</li><li>DreamFolks</li><li>Superkicks</li><li>Simpl</li><li>Porter</li><li>Osmo</li><li>Practo</li><li>ABInBev</li><li>Akshayakalpa</li><li>Bindu</li><li>Fantasy Akhada</li><li>Supertails</li><li>Third Wave Coffee</li><li>Magniflex</li><li>Unbound</li><li>Chanakya University</li><li>ASBL</li><li>Tara Healthcare</li><li>Gyan</li><li>Nandu&#x27;s</li><li>Shvasa</li><li>IndigoLearn</li><li>Ms.Chief</li><li>Atovio</li><li>Smart Medical Buyer</li></ul>
+    </div>
+    <div class="proof proof--press rv">
+      <span class="tag">// In the press</span>
+      <ul class="proof__press"><li><a href="https://brandequity.economictimes.indiatimes.com/news/advertising/truecaller-returns-with-jamthescam-campaign/87729855" target="_blank" rel="noopener"><span class="pub">ET BrandEquity</span><span class="hl">Truecaller returns with #JamTheScam</span><span class="go" aria-hidden="true">↗</span></a></li><li><a href="https://www.afaqs.com/news/advertising/truecallers-jamthescam-campaign-raises-awareness-about-phone-scams" target="_blank" rel="noopener"><span class="pub">afaqs!</span><span class="hl">Truecaller&#x27;s #JamTheScam raises awareness about phone scams</span><span class="go" aria-hidden="true">↗</span></a></li><li><a href="https://www.exchange4media.com/digital-news/truecaller-gives-phone-scammers-a-taste-of-their-own-medicine-with-jamthescam-116789.html" target="_blank" rel="noopener"><span class="pub">exchange4media</span><span class="hl">Truecaller gives phone scammers a taste of their own medicine</span><span class="go" aria-hidden="true">↗</span></a></li><li><a href="https://www.campaignindia.in/article/truecaller-takes-the-comical-route-to-tackle-tele-scams/475056" target="_blank" rel="noopener"><span class="pub">Campaign India</span><span class="hl">Truecaller takes the comical route to tackle tele-scams</span><span class="go" aria-hidden="true">↗</span></a></li><li><a href="https://www.adsoftheworld.com/campaigns/begin-again-with-bindu" target="_blank" rel="noopener"><span class="pub">Ads of the World</span><span class="hl">Begin Again with Bindu</span><span class="go" aria-hidden="true">↗</span></a></li><li><a href="https://marketingmind.in/bindu-fizz-jeera-masala-wirality-new-campaign/" target="_blank" rel="noopener"><span class="pub">Marketing Mind</span><span class="hl">Bindu Fizz Jeera Masala&#x27;s new campaign with Wirality</span><span class="go" aria-hidden="true">↗</span></a></li><li><a href="https://mad-over-marketing.com/johnny-lever-takes-on-scammers-in-truecallers-hilarious-jam-the-scam-campaign/" target="_blank" rel="noopener"><span class="pub">Mad Over Marketing</span><span class="hl">Johnny Lever takes on scammers in Jam the Scam</span><span class="go" aria-hidden="true">↗</span></a></li></ul>
+    </div>
+  </section>
+
   <!-- ACT I: PERFORMANCE MARKETING -->
   <section class="wrap act" id="marketing">
     <div class="act-head rv">
@@ -516,7 +574,12 @@ footer small{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-tr
       <p class="lead">The brief. The numbers. The creative that moved them.</p>
     </div>
     <div class="roster" id="roster"></div>
+    <div class="gs-controls">
+      <div class="gs-filter" id="gsFilter" role="group" aria-label="Filter growth stories by category"></div>
+      <span class="tag" id="gsCount"></span>
+    </div>
     <div id="clients"></div>
+    <div class="gs-more" id="gsMoreWrap"><button class="btn btn--ghost" id="gsMore" type="button">See all stories</button></div>
   </section>
 
   
@@ -854,7 +917,7 @@ const c=$('#cadence');SITE.cadence.forEach(x=>{
           <div class="client__id"><span class="n">//${nn}</span><span class="vert">${c.vert}</span></div>
           <h3>${c.name}</h3>
           <div class="client__meta">
-            <span>${c.cat}</span><span>${c.priority}</span><span>${c.dur}</span><span>${c.platforms}</span>
+            <span>${c.cat}</span><span>${c.dur}</span><span>${c.platforms}</span>
           </div>
         </div>
         <div class="client__copy">
@@ -961,6 +1024,37 @@ const MKT = {
 })();
 
 
+
+
+/* ===================== GROWTH STORIES FILTER ===================== */
+(()=>{
+  const FEATURED=6, wrap=$('#clients'), f=$('#gsFilter'), more=$('#gsMore'), moreWrap=$('#gsMoreWrap'), count=$('#gsCount');
+  let cat=null, expanded=false;
+  const cats=SITE.verticals.map(v=>v.name);
+  f.innerHTML=`<button type="button" aria-pressed="true" data-c="">All<sup>${ORDER.length}</sup></button>`+
+    cats.map(c=>`<button type="button" aria-pressed="false" data-c="${c}">${c}<sup>${ORDER.filter(id=>CLIENTS[id].vert===c).length}</sup></button>`).join('');
+  function apply(){
+    let shown=0;
+    ORDER.forEach((id,i)=>{
+      const sec=document.getElementById('c-'+id); if(!sec) return;
+      const ok = cat ? CLIENTS[id].vert===cat : (expanded || i<FEATURED);
+      sec.hidden=!ok; if(ok) shown++;
+    });
+    f.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed', (b.dataset.c||null)===cat));
+    moreWrap.hidden = !!cat || expanded;
+    more.textContent = `See all ${ORDER.length} stories`;
+    count.textContent = cat ? `${shown} ${shown===1?'story':'stories'}` : (expanded ? `All ${ORDER.length} stories` : `${FEATURED} featured of ${ORDER.length}`);
+    document.querySelectorAll('#clients .creative:not([hidden])').forEach(x=>x.classList.add('in'));
+  }
+  f.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;cat=b.dataset.c||null;apply();});
+  more.addEventListener('click',()=>{expanded=true;apply();});
+  $('#roster').addEventListener('click',e=>{
+    const a=e.target.closest('a'); if(!a) return;
+    e.preventDefault(); cat=null; expanded=true; apply();
+    const t=document.querySelector(a.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth'});
+  });
+  apply();
+})();
 
 /* ===================== BEHAVIOUR ===================== */
 // nav scroll state
