@@ -237,7 +237,7 @@ section[id],.client{scroll-margin-top:86px}
 .steps .s .p{color:var(--dim);font-size:12.5px;margin-top:8px;line-height:1.6}
 
 /* ---------- CONTACT ---------- */
-.contact{padding:110px 0 60px;border-top:1px solid var(--line);margin-top:96px}
+.contact{padding:110px var(--pad) 60px;border-top:1px solid var(--line);margin-top:96px}
 .contact h2{font-family:var(--disp);font-weight:500;letter-spacing:-.03em;line-height:.94;
   font-size:clamp(56px,13vw,190px);text-transform:uppercase}
 .contact__row{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-top:44px}
@@ -401,6 +401,32 @@ footer small{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-tr
   .bm-pick{width:100%}.bm-pick select{flex:1}
 }
 @media(max-width:560px){#mkt-services .svc{grid-template-columns:1fr}#mkt-services .svc .cell:last-child{grid-column:auto}#mkt-services .svc .cell{min-height:0;gap:18px}}
+
+/* ---------- ENGAGEMENT ---------- */
+.eng-steps{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.eng-steps li{background:var(--ink);padding:30px 26px 34px;display:flex;flex-direction:column;gap:12px;min-height:220px}
+.eng-steps .n,.eng-teams .n{font-family:var(--disp);font-size:34px;font-weight:600;color:var(--ghost);line-height:1}
+.eng-steps .h{font-family:var(--disp);font-size:clamp(20px,2.2vw,26px);font-weight:600;letter-spacing:-.01em;margin-top:28px}
+.eng-steps .p{color:var(--dim);font-size:13px;line-height:1.65}
+.eng-teams{border:1px solid var(--line);border-top:none;padding:34px 26px 30px}
+.eng-teams__head{display:flex;align-items:baseline;gap:18px}
+.eng-teams__head .h{font-family:var(--disp);font-size:clamp(22px,2.6vw,32px);font-weight:600;letter-spacing:-.02em}
+.eng-teams__grid{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:stretch;margin-top:28px}
+.eng-teams .team{border:1px solid var(--line-2);padding:26px 24px;display:flex;flex-direction:column;gap:10px}
+.eng-teams .team .t{font-family:var(--disp);font-size:clamp(18px,2vw,22px);font-weight:600;line-height:1.25;margin-top:6px}
+.eng-teams .team .d{color:var(--dim);font-size:13px;line-height:1.65}
+.eng-teams .link{display:grid;place-items:center}
+.eng-teams .link span{width:48px;height:48px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;font-size:20px;color:var(--paper)}
+.eng-teams__foot{color:var(--dim);font-size:13px;margin-top:22px;text-align:center;letter-spacing:.04em}
+@media(max-width:1000px){.eng-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){
+  .eng-steps{grid-template-columns:1fr}
+  .eng-steps li{min-height:0;padding:24px 22px}
+  .eng-steps .h{margin-top:4px}
+  .eng-teams{padding:28px 22px}
+  .eng-teams__grid{grid-template-columns:1fr;gap:12px}
+  .eng-teams .link span{transform:rotate(90deg);width:40px;height:40px}
+}
 </style>
 </head>
 <body>
@@ -524,11 +550,29 @@ footer small{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-tr
   <section class="wrap" id="engagement">
     <div class="sec-head rv">
       <h2>How an<br>engagement works</h2>
-      <p class="lead">One dedicated pod. Strategy, production, launch, testing and refresh, every month.</p>
+      <p class="lead">Audit to execution, in five steps.</p>
     </div>
-    <div class="model" id="model"></div>
-    <div class="plug" id="plug"></div>
-    <div class="steps" id="nextsteps"></div>
+    <ol class="eng-steps rv">
+      <li><span class="n">01</span><span class="h">Audit</span><span class="p">We dig into your ad accounts.</span></li>
+      <li><span class="n">02</span><span class="h">Findings</span><span class="p">We show you what's working and what isn't.</span></li>
+      <li><span class="n">03</span><span class="h">Proposal</span><span class="p">We recommend what your business needs.</span></li>
+      <li><span class="n">04</span><span class="h">Execution</span><span class="p">We get to work.</span></li>
+    </ol>
+    <div class="eng-teams rv">
+      <div class="eng-teams__head"><span class="n">05</span><span class="h">Two teams. One engine.</span></div>
+      <div class="eng-teams__grid">
+        <div class="team">
+          <span class="tag">// Media strategy team</span>
+          <p class="t">Plans and runs your media.</p>
+        </div>
+        <div class="link" aria-hidden="true"><span>⇄</span></div>
+        <div class="team">
+          <span class="tag">// Media creatives team</span>
+          <p class="t">Makes the ads that run.</p>
+        </div>
+      </div>
+      <p class="eng-teams__foot">Working hand in hand.</p>
+    </div>
   </section>
 
   <!-- CONTACT -->
@@ -916,12 +960,7 @@ const MKT = {
   });
 })();
 
-// model / plug / steps
-(()=>{
-  const m=$('#model');SITE.model.forEach(x=>m.appendChild(el('div','m',`<div class="lbl">${x.lbl}</div><div class="big">${x.big}</div><div class="p">${x.p}</div>`)));
-  const p=$('#plug');SITE.plug.forEach(x=>p.appendChild(el('div','p',`<div class="k"><span class="opt">${x.opt}</span>${x.k}</div><div class="d">${x.d}</div>`)));
-  const s=$('#nextsteps');SITE.nextsteps.forEach(x=>s.appendChild(el('div','s',`<div class="n">${x.n}</div><div class="h">${x.h}</div><div class="p">${x.p}</div>`)));
-})();
+
 
 /* ===================== BEHAVIOUR ===================== */
 // nav scroll state
